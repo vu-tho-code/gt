@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+:root {
+  --blue-color: #1584ec;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(45deg, #000000, #000000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #090612;
+  overflow: hidden;
+  margin: 0 30px;
+}
+
+.card__img {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  transition: 0.25s;
+  margin: 0 auto;
+  transform: translateY(25px);
+  border-radius: 50%;
+  border: 4px solid var(--blue-color);
+  cursor: pointer;
+}
+
+.card__img:hover {
+  width: 100%;
+  height: 100%;
+  border-radius: unset;
+  border: unset;
+  transform: unset;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+h2 {
+  color: rgb(4, 197, 251);
+  margin-top: 40px;
+}
+
+p {
+  color: var(--blue-color);
+}
+
+.card__social a {
+  text-decoration: none;
+  color: white;
+  margin: 25px 20px 40px;
+  display: inline-block;
+  font-size: 18px;
+  transition: 0.25s;
+}
+
+.card__social a:hover {
+  color: var(--blue-color);
+}
+
+button {
+  outline: none;
+  border: none;
+  color: white;
+  background-color: transparent;
+  border: 1px solid var(--blue-color);
+  padding: 10px 20px;
+  border-radius: inherit;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  background-color: var(--blue-color);
+}
+
+.bubble-text {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1584ec;
+  position: relative;
+}
+
+.bubble-text span {
+  display: inline-block;
+  position: relative;
+  animation: bubbleUp 0.8s ease-in-out infinite; /* Thời gian ngắn hơn */
+}
+
+.bubble-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+.bubble-text span:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.bubble-text span:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.bubble-text span:nth-child(4) {
+  animation-delay: 0.15s;
+}
+.bubble-text span:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.bubble-text span:nth-child(6) {
+  animation-delay: 0.25s;
+}
+.bubble-text span:nth-child(7) {
+  animation-delay: 0.3s;
+}
+.bubble-text span:nth-child(8) {
+  animation-delay: 0.35s;
+}
+.bubble-text span:nth-child(9) {
+  animation-delay: 0.4s;
+}
+.bubble-text span:nth-child(10) {
+  animation-delay: 0.45s;
+}
+.bubble-text span:nth-child(11) {
+  animation-delay: 0.5s;
+}
+.bubble-text span:nth-child(12) {
+  animation-delay: 0.55s;
+}
+.bubble-text span:nth-child(13) {
+  animation-delay: 0.6s;
+}
+.bubble-text span:nth-child(14) {
+  animation-delay: 0.65s;
+}
+.bubble-text span:nth-child(15) {
+  animation-delay: 0.7s;
+}
+
+@keyframes bubbleUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries cho các kích thước màn hình khác nhau */
+
+/* Tối ưu hóa cho màn hình nhỏ (điện thoại) */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .card__img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .card__social a {
+    font-size: 16px;
+    margin: 15px 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .bubble-text {
+    font-size: 18px;
+  }
+}
+
+/* Tối ưu hóa cho màn hình lớn (laptop) */
+@media (min-width: 769px) {
+  .card {
+    width: 350px;
+    height: 450px;
+  }
+
+  .card__img {
+    width: 120px;
+    height: 120px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .card__social a {
+    font-size: 18px;
+    margin: 25px 20px 40px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .bubble-text {
+    font-size: 24px;
+  }
+}
